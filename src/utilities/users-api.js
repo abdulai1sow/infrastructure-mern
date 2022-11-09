@@ -65,6 +65,7 @@ export function login(credentials) {
 async function sendRequest(url, method = 'GET', payload = null) {
   const options = {method}
   if (payload) {
+    //header are meta data to let the backend know what type data 
     options.headers = { 'Content-Type': 'application/json' };
     options.body = JSON.stringify(payload);
   }
